@@ -27,6 +27,7 @@ header .profile > img {
     width: 33%;
     border: 10px solid #2f293e;
     border-radius: 100%;
+    pointer-events: none;
 }
 
 header .profile > h1 {
@@ -42,21 +43,16 @@ header .profile > .social-links {
     text-align: center;
 }
 
-header .profile > .social-links a {
-    display: inline-block;
-    background-color: #2f293e;
-    border: 8px solid #2f293e;
-    border-radius: 100%;
-}
-
-header .profile > .social-links a:hover {
+header .profile > .social-links a:hover img {
     background-color: #605b9b;
     border: 8px solid #605b9b;
 }
 
 header .profile > .social-links img {
-    filter: invert();
     width: 18px;
+    background-color: #2f293e;
+    border: 8px solid #2f293e;
+    border-radius: 100%;
 }
 
 /* Header Navigation Menu */
@@ -83,40 +79,25 @@ nav > .nav-list img {
     padding-right: 6px;
     vertical-align: text-top;
     width: 18px;
-    filter: invert();
+    pointer-events: none;
 }
-
-/* .navigation-toggle {
-    display: none;
-    background-color: red;
-    z-index: 1;
-} */
-
 
 @media screen and (max-width: 1199px) {
     header {
         width: 80%;
-        /* display: none; */
+        visibility: hidden;
     }
-
-    /* #header {
-        
-    }
-    
-    .navigation-toggle {
-        filter: invert();
-    } */
-
 }
 
 /* HERO SECTION */
 #hero {
     margin-left: 15%;
     height: 100vh;
-    background: url("../img/bg-hero.jpg") top center;
+    background: url("../img/images/bg-hero.jpg") top center;
     background-size: cover;
     display: flex;
     justify-content: center;
+    pointer-events: none;
 }
 
 #hero::before {
@@ -163,13 +144,41 @@ nav > .nav-list img {
 }
 
 .about-container section:nth-child(even) {
-    background: #f5f9ff;
+    background: #f3f7fd;
 }
 
 @media screen and (max-width: 1199px) {
     .about-container {
         margin-left: 0;
     }
+}
+
+/* PRESENTING SECTIONS */
+.presenting-section {
+    padding: 10px 5% 10px 5%;
+}
+
+.presenting-section > h1::after {
+    margin-top: 10px;
+    display: block;
+    content: "";
+    background-color: #605b9b;
+    width: 50px;
+    height: 3px;
+}
+
+/* Contact Me Section */
+
+.presenting-section[id="contact"] > .container {
+    display: flex;
+}
+
+.presenting-section .contact-information {
+    /* background-color: blue; */
+}
+
+.presenting-section .email-form {
+    /* background: green; */
 }
 
 /* FOOTER */
