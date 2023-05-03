@@ -18,6 +18,7 @@ header {
     width: 15%;
     z-index: 9997;
     background: #181628;
+    overflow-y: scroll;
 }
 
 /* Header Profile Picture */
@@ -43,16 +44,16 @@ header .profile > .social-links {
     text-align: center;
 }
 
-header .profile > .social-links a:hover img {
-    background-color: #605b9b;
-    border: 8px solid #605b9b;
-}
-
 header .profile > .social-links img {
     width: 18px;
     background-color: #2f293e;
     border: 8px solid #2f293e;
     border-radius: 100%;
+}
+
+header .profile > .social-links a:hover img {
+    background-color: #605b9b;
+    border: 8px solid #605b9b;
 }
 
 /* Header Navigation Menu */
@@ -155,7 +156,11 @@ nav > .nav-list img {
 
 /* PRESENTING SECTIONS */
 .presenting-section {
-    padding: 10px 5% 10px 5%;
+    padding: 10px 5% 10px 5%;    
+}
+
+.presenting-section > h1 {
+    font-size: 30px;
 }
 
 .presenting-section > h1::after {
@@ -168,17 +173,93 @@ nav > .nav-list img {
 }
 
 /* Contact Me Section */
-
 .presenting-section[id="contact"] > .container {
     display: flex;
 }
 
-.presenting-section .contact-information {
-    /* background-color: blue; */
+.presenting-section[id="contact"] .contact-information {
+    padding: 0 20px 20px 20px;
 }
 
-.presenting-section .email-form {
-    /* background: green; */
+.presenting-section[id="contact"] .contact-information > div {
+    display: flex;
+    align-items: center;
+}
+
+.presenting-section[id="contact"] .contact-information .img-container {
+    border: 10px solid #605b9b;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.presenting-section[id="contact"] .contact-information .img-container > img {
+    background-color: #605b9b;
+    width: 100%;
+    pointer-events: none;
+}
+
+.presenting-section[id="contact"] .contact-information .text-container h2 {
+    margin-bottom: 10px;
+}
+
+.presenting-section[id="contact"] .contact-information .text-container p {
+    margin-top: 0;
+    color: #808080;
+}
+
+.presenting-section[id="contact"] .contact-information > .email a {
+    color: #808080;
+}
+
+.presenting-section[id="contact"] .contact-information > .social-links {
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+.presenting-section[id="contact"] .contact-information > .social-links img {
+    width: 20px;
+    background-color: #2f293e;
+    border: 10px solid #2f293e;
+    border-radius: 100%;
+}
+
+.presenting-section[id="contact"] .contact-information > .social-links a:hover img {
+    background-color: #605b9b;
+    border: 10px solid #605b9b;
+}
+
+.presenting-section[id="contact"] .email-form > form {
+    background: #cccccc;
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.presenting-section[id="contact"] .email-form > form .name-email-container {
+    display: flex;
+}
+
+.presenting-section[id="contact"] .email-form > form .name-email-container label {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.presenting-section[id="contact"] .email-form > form label {
+    display: flex;
+}
+
+.presenting-section[id="contact"] .email-form > form .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+    .presenting-section[id="contact"] > .container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* FOOTER */
@@ -188,6 +269,7 @@ footer {
     bottom: 0;
     width: 15%;
     z-index: 9999;
+    background-color: #181628;
 }
 
 footer p {
