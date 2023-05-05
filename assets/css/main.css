@@ -51,7 +51,8 @@ header .profile > .social-links img {
     border-radius: 100%;
 }
 
-header .profile > .social-links a:hover img {
+header .profile > .social-links a:hover img,
+header .profile > .social-links a:active img {
     background-color: #605b9b;
     border: 8px solid #605b9b;
 }
@@ -175,6 +176,7 @@ nav > .nav-list img {
 /* Contact Me Section */
 .presenting-section[id="contact"] > .container {
     display: flex;
+    column-gap: 50px;
 }
 
 .presenting-section[id="contact"] .contact-information {
@@ -225,42 +227,89 @@ nav > .nav-list img {
     border-radius: 100%;
 }
 
-.presenting-section[id="contact"] .contact-information > .social-links a:hover img {
+.presenting-section[id="contact"] .contact-information > .social-links a:hover img,
+.presenting-section[id="contact"] .contact-information > .social-links a:active img {
     background-color: #605b9b;
     border: 10px solid #605b9b;
 }
 
-.presenting-section[id="contact"] .email-form > form {
-    background: #cccccc;
-    padding: 0 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
+.presenting-section[id="contact"] .email-form {
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
 }
 
-.presenting-section[id="contact"] .email-form > form .name-email-container {
-    display: flex;
+.presenting-section[id="contact"] .email-form input,
+.presenting-section[id="contact"] .email-form textarea {
+    font-family: inherit;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 0;
+    border: 1px #808080 solid;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
 }
 
-.presenting-section[id="contact"] .email-form > form .name-email-container label {
-    display: flex;
-    /* flex-direction: row; */
+.presenting-section[id="contact"] .email-form textarea {
+    resize: vertical;
 }
 
-.presenting-section[id="contact"] .email-form > form label {
-    display: flex;
+.presenting-section[id="contact"] .email-form .button-container > button {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #181628;
+    color: white;
 }
 
-.presenting-section[id="contact"] .email-form > form .button-container {
+.presenting-section[id="contact"] .email-form .button-container > button:hover,
+.presenting-section[id="contact"] .email-form .button-container > button:active {
+    background-color: #605b9b;
+}
+
+.presenting-section[id="contact"] .email-form .name-email-container {
     display: flex;
-    justify-content: center;
+    column-gap: 50px;
+}
+
+.presenting-section[id="contact"] .email-form .input-container {
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.presenting-section[id="contact"] .email-form .button-container {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .presenting-section[id="contact"] .email-form .name-email-container {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 1199px) {
     .presenting-section[id="contact"] > .container {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
+
+/* Disabled E-Mail Form */
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.presenting-section[id="contact"] .email-form input,
+.presenting-section[id="contact"] .email-form textarea {
+    background-color: #eeeeee;
+    /* color: black; */
+    /* font-weight: bold; */
+    font-style: italic;   
+}
+/* Disabled E-Mail Form */
 
 /* FOOTER */
 footer {
@@ -289,3 +338,4 @@ footer p {
         background: #181628;
     }
 }
+
