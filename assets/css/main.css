@@ -1,4 +1,4 @@
-/* GENERAL */
+/* ========== GENERAL ========== */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,17 +8,16 @@ a, a:hover {
     text-decoration: none;
 }
 
-
-/* HEADER */
+/* ========== HEADER ========== */
 header {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 15%;
+    width: 300px;
     z-index: 9997;
     background: #181628;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* Header Profile Picture */
@@ -86,14 +85,14 @@ nav > .nav-list img {
 
 @media screen and (max-width: 1199px) {
     header {
-        width: 80%;
+        width: 300px;
         visibility: hidden;
     }
 }
 
-/* HERO SECTION */
+/* ========== HERO SECTION ========== */
 #hero {
-    margin-left: 15%;
+    margin-left: 300px;
     height: 100vh;
     background: url("../img/images/bg-hero.jpg") top center;
     background-size: cover;
@@ -140,9 +139,9 @@ nav > .nav-list img {
     }
 }
 
-/* ABOUT SECTION */
+/* ========== ABOUT SECTION ========== */
 .about-container {
-    margin-left: 15%;
+    margin-left: 300px;
 }
 
 .about-container section:nth-child(even) {
@@ -155,9 +154,9 @@ nav > .nav-list img {
     }
 }
 
-/* PRESENTING SECTIONS */
+/* ========== PRESENTING SECTIONS ========== */
 .presenting-section {
-    padding: 10px 5% 10px 5%;    
+    padding: 10px 5% 10px 5%;
 }
 
 .presenting-section > h1 {
@@ -173,10 +172,38 @@ nav > .nav-list img {
     height: 3px;
 }
 
+/* Skills Section */
+.presenting-section[id="skills"] > .container > ul {
+    column-count: 2;
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.presenting-section[id="skills"] > .container > ul > li {
+    padding-bottom: 8px;
+}
+
+.presenting-section[id="skills"] > .container > ul > li > img {
+    padding-right: 6px;
+    vertical-align: text-top;
+    width: 18px;
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .presenting-section[id="skills"] > .container > ul {
+        column-count: 1;
+    }
+}
+
 /* Contact Me Section */
 .presenting-section[id="contact"] > .container {
     display: flex;
     column-gap: 50px;
+    width: 100%;
 }
 
 .presenting-section[id="contact"] .contact-information {
@@ -305,18 +332,16 @@ nav > .nav-list img {
 .presenting-section[id="contact"] .email-form input,
 .presenting-section[id="contact"] .email-form textarea {
     background-color: #eeeeee;
-    /* color: black; */
-    /* font-weight: bold; */
     font-style: italic;   
 }
 /* Disabled E-Mail Form */
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 15%;
+    width: 300px;
     z-index: 9999;
     background-color: #181628;
 }
