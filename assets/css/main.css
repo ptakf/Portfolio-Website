@@ -173,7 +173,7 @@ nav > .nav-list img {
 }
 
 /* Skills Section */
-.presenting-section[id="skills"] > .container > ul {
+.presenting-section[id="skills"] > .container > .skills-list {
     column-count: 2;
     list-style: none;
     list-style-position: inside;
@@ -181,20 +181,74 @@ nav > .nav-list img {
     font-size: 18px;
 }
 
-.presenting-section[id="skills"] > .container > ul > li {
-    padding-bottom: 8px;
+.presenting-section[id="skills"] > .container > .skills-list > li {
+    margin-bottom: 8px;
 }
 
-.presenting-section[id="skills"] > .container > ul > li > img {
+.presenting-section[id="skills"] > .container > .skills-list > li > img {
     padding-right: 6px;
     vertical-align: text-top;
     width: 18px;
     pointer-events: none;
 }
 
+@media screen and (max-width: 768px) {
+    .presenting-section[id="skills"] > .container > .skills-list {
+        column-count: 1;
+    }
+}
+
+/* My Projects Section */
+.presenting-section[id="projects"] > .container {
+    column-count: 3;
+    column-gap: 50px;
+}
+
+.presenting-section[id="projects"] .project a {
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 30px;
+    background-color: #2f293e;
+    border: 3px #2f293e solid;
+}
+
+.presenting-section[id="projects"] .project a:hover,
+.presenting-section[id="projects"] .project a:active {
+    background-color: #605b9b;
+    border: 3px #605b9b solid;
+}
+
+.presenting-section[id="projects"] .project a .img-container {
+    position: relative;
+}
+
+.presenting-section[id="projects"] .project a:hover .img-container::before,
+.presenting-section[id="projects"] .project a:active .img-container::before {
+    content: "";
+    background: rgba(225, 225, 225, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.presenting-section[id="projects"] .project a img {
+    pointer-events: none;
+    width: 100%;
+}
+
+.presenting-section[id="projects"] .project a h2 {
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
 
 @media screen and (max-width: 768px) {
-    .presenting-section[id="skills"] > .container > ul {
+    .presenting-section[id="projects"] > .container {
         column-count: 1;
     }
 }
@@ -293,7 +347,7 @@ nav > .nav-list img {
 
 .presenting-section[id="contact"] .email-form .button-container > button:hover,
 .presenting-section[id="contact"] .email-form .button-container > button:active {
-    background-color: #605b9b;
+    background-color: #2f293e;
 }
 
 .presenting-section[id="contact"] .email-form .name-email-container {
